@@ -39,22 +39,14 @@ A arquitetura é dividida em três camadas lógicas para garantir rastreabilidad
 
 O repositório está organizado com foco em scripts SQL, facilitando a implantação e manutenção do Data Warehouse.
 ```
-├── datasets/                                        # Conjuntos de dados brutos usados no projeto (dados de ERP e CRM)
 ├── docs/
-│   ├── data_architecture.drawio                     # Arquivo Draw.io mostrando a arquitetura do projeto
-|   ├── data_layer.png                               # Ilustração da camada de dados, mostrando os níveis Bronze, Silver e Gold
-|   ├── business_rules.md                            # Documento descrevendo as regras de negócio aplicadas durante o processo de transformação de dados
-|   ├── integration_model.drawio                     # Diagrama mostrando o modelo de integração entre fontes e camadas do Data Warehouse
-|   ├── data_mart.drawio                             # Arquivo Draw.io com os modelos de dados (esquema estrela)
-|   ├── data_catalog.md                              # Catálogo dos conjuntos de dados, incluindo descrições de campos e metadados
-|   ├── data_flow.drawio                             # Arquivo Draw.io com o diagrama de fluxo de dados
-│   ├── padroes_nomenclatura.md                      # Diretrizes consistentes de nomenclatura para tabelas, colunas e arquivos
 │   └── ...
-├── scripts/
-│   ├── bronze/                                      # Scripts para carga de dados na camada Bronze
-│   ├── silver/                                      # Scripts para limpeza e transformação (Bronze -> Silver)
-│   └── gold/                                        # Scripts para modelagem e agregação (Silver -> Gold)
+├── src/
+│   ├── glue/
+│   ├── lambda/
+│   └── sql/
 ├── tests/                                           # Scripts para testes de qualidade de dados
+├── terraform/
 ├── README.md                                        # Visão geral do projeto e instruções
 ├── LICENSE                                          # Informações de licença do repositório
 └── .gitignore                                       # Arquivos e diretórios ignorados pelo Git
@@ -75,11 +67,7 @@ Pré-requisitos
 
 A documentação detalhada do projeto é fundamental para a sua manutenção e evolução.
 
-* **[Regras de Negócios](docs/business_rules.md)**: Documento que define as regras e validações de negócio que garantem a integridade e consistência dos dados no projeto.
-* **[Convenções de Nomenclatura](docs/padroes_nomenclatura.md)**: Descreve todos os padrões de nomenclatura para tabelas, colunas e outros objetos do Data Warehouse.
-* **[Diagrama da Arquitetura](docs/design_arquitetura.png)**: Arquivo editável do Draw.io com o diagrama completo da arquitetura de dados.
-* **[Camadas do Data Warehouse](docs/data_layer.png)**: Arquivo editável do Draw.io com o diagrama completo das camadas do schema medalhão.
-* **[Data Catalog](docs/data_catalog.md)**: Documento que descreve e organiza os conjuntos de dados do projeto, detalhando suas origens, estrutura, finalidade e relações no ecossistema de dados.
+**Em contrução**
 
 ---
 
