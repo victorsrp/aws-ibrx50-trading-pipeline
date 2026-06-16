@@ -22,7 +22,7 @@ Este projeto resolve esses problemas através de um pipeline de dados orquestrad
 ---
 
 ## 🏛️ Arquitetura de Dados
-![Data Architecture](docs/design_arquitetura.png)
+![Data Architecture](docs/Diagrama_de_Arquitetura.png)
 A arquitetura é dividida em três camadas lógicas para garantir rastreabilidade e performance:
 
 * 🥉 **Camada Bronze:** Contém os dados brutos (JSON/CSV) extraídos da API financeira via AWS Lambda. O foco aqui é a preservação do dado original para auditoria e reprocessamento.
@@ -31,7 +31,7 @@ A arquitetura é dividida em três camadas lógicas para garantir rastreabilidad
 
 * 🥇 **Camada Gold:** Camada final com as regras de negócio aplicadas. Através de **Window Functions** no SQL/PySpark, calculamos a MME9 e detectamos os setups de Larry Williams, além de monitorar os níveis de Stop Loss.
 
-> Para um detalhamento visual completo, consulte o **[Diagrama da Arquitetura](docs/design_arquitetura.png)**.
+> Para um detalhamento visual completo, consulte o **[Diagrama da Arquitetura](docs/Diagrama_de_Arquitetura.png)**.
 
 ---
 
